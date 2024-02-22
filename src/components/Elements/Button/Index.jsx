@@ -14,15 +14,5 @@ const Button = ({
     </button>
   );
 };
-// function Button({
-//   className = "bg-black",
-//   children = "...",
-//   type = "button",
-//   onClick = () => {},
-// }) {
-//   return (
-
-//   );
-// }
 
 export default Button;

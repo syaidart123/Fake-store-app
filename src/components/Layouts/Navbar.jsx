@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLogin } from "../../hooks/useLogin";
 import Button from "../Elements/Button/Index";
 import { useSelector } from "react-redux";
 import Modal from "../Elements/Modal";
@@ -11,7 +10,6 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [totalCart, setTotalCart] = useState(0);
-  const username = useLogin();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.data);
   const products = useSelector((state) => state.product.data);
@@ -55,7 +53,6 @@ const Navbar = () => {
                   d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                 />
               </svg>
-              <p className="text-sm">{username}</p>
             </div>
             <button
               onClick={() => dispatch(open())}
